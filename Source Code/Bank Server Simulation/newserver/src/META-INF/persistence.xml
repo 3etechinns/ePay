@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/persistence
+    http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd" version="1.0">
+    
+	<persistence-unit name="newserverPU"
+		transaction-type="RESOURCE_LOCAL">
+		<provider>
+			org.eclipse.persistence.jpa.PersistenceProvider
+		</provider>
+		<class>cn.edu.seu.banktrade.BankTrade</class>
+		<class>cn.edu.seu.businessinfo.BusinessInfo</class>
+		<class>cn.edu.seu.elenoteinfo.ElenoteInfo</class>
+		<class>cn.edu.seu.persondepositinfo.PersonDepositInfo</class>
+		<class>cn.edu.seu.personinfo.PersonInfo</class>
+		<class>cn.edu.seu.supermarketprice.SupermartketPrice</class>
+		<class>cn.edu.seu.xmlsave.XmlSave</class>
+		<class>cn.edu.seu.rsadb.RsaDb</class>
+		<class>cn.edu.seu.bankaccountinfo.BankAccountInfo</class>
+		<class>cn.edu.seu.personinterestinfo.PersonInterestInfo</class>
+		<properties>
+			<property name="eclipselink.jdbc.driver"
+				value="oracle.jdbc.OracleDriver" />
+			<property name="eclipselink.jdbc.url"
+				value="jdbc:oracle:thin:@127.0.0.1:1521:Surpassing" />
+			<property name="eclipselink.jdbc.user" value="system" />
+			<property name="eclipselink.jdbc.password" value="citicup" />
+		</properties>
+	</persistence-unit>
+
+</persistence>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="resources"/>
+	<classpathentry kind="con" path="melibrary.com.genuitec.eclipse.lib.jpa2.MYECLIPSE_ECLIPSELINK21"/>
+	<classpathentry kind="lib" path="libs/bluecove-2.1.0.jar"/>
+	<classpathentry kind="lib" path="libs/commons-io.jar"/>
+	<classpathentry kind="lib" path="libs/jdom-2.0.5.jar"/>
+	<classpathentry kind="lib" path="libs/ojdbc6.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="C:/Users/honka/Workspaces/MyEclipse 10/sp/libs/substance.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

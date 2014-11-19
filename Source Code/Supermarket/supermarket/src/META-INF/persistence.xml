@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/persistence
+    http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd" version="2.0">
+    
+	<persistence-unit name="sp" transaction-type="RESOURCE_LOCAL">
+		<provider>
+			org.eclipse.persistence.jpa.PersistenceProvider
+		</provider>
+		<class>cn.edu.seu.supermarketprice.SupermarketPrice</class>
+		<class>cn.edu.seu.xmlsave.XmlSave</class>
+		<class>cn.edu.seu.imageguide.ImageGuide</class>
+		<properties>
+			<property name="javax.persistence.jdbc.driver"
+				value="oracle.jdbc.OracleDriver" />
+			<property name="javax.persistence.jdbc.url"
+				value="jdbc:oracle:thin:@127.0.0.1:1521:citicup" />
+			<property name="javax.persistence.jdbc.user" value="system" />
+			<property name="javax.persistence.jdbc.password"
+				value="citicup" />
+		</properties>
+	</persistence-unit>
+
+</persistence>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f3f3f3"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/rl_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="45dip"
+        android:layout_x="0dip"
+        android:layout_y="-1dip"
+        android:background="@drawable/title"
+        android:gravity="center_vertical" >
+
+        
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="主页"
+            android:textColor="#ffffff"
+            android:textSize="20sp" />
+    </RelativeLayout> 
+
+    <TextView
+        android:id="@+id/text_shoukuan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/shoukuan"
+        android:layout_below="@+id/shoukuan"
+        android:layout_marginRight="19dp"
+        android:text="收款"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="17sp" />
+
+    <EditText
+        android:id="@+id/editText1"
+        android:layout_width="0dip"
+        android:layout_height="0dip"
+        android:layout_below="@+id/text_shoukuan"
+        android:layout_centerHorizontal="true"
+        android:ems="1" >
+
+        <requestFocus />
+    </EditText>
+
+    <Button
+        android:id="@+id/view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/shoukuan"
+        android:layout_below="@+id/editText1"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/tabs_search" />
+
+    <TextView
+        android:id="@+id/viewcode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/view"
+        android:layout_below="@+id/view"
+        android:text="查看二维码"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="17sp" />
+
+    <Button
+        android:id="@+id/shoukuan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/rl_layout"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="99dp"
+        android:background="@drawable/tabs_shoukuan" />
+
+    <Button
+        android:id="@+id/modify"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/text_shoukuan"
+        android:layout_marginLeft="27dp"
+        android:layout_toRightOf="@+id/editText1"
+        android:background="@drawable/tabs_phomodify" /> 
+
+    <Button
+        android:id="@+id/exit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/viewcode"
+        android:layout_alignRight="@+id/modify"
+        android:background="@drawable/tabs_close" />
+
+    <TextView
+        android:id="@+id/text_exit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/viewcode"
+        android:layout_alignBottom="@+id/viewcode"
+        android:layout_alignLeft="@+id/exit"
+        android:layout_marginLeft="22dp"
+        android:text="退出"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="17sp" />
+
+    <TextView
+        android:id="@+id/text_fukuan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/view"
+        android:layout_alignRight="@+id/modify"
+        android:text="修改信息"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="17sp" />
+
+</RelativeLayout>

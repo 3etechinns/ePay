@@ -1,0 +1,115 @@
+.mainPanel1
+{
+	font-size: 16px;
+	font-family: "微软雅黑","黑体",Verdana, Arial, Helvetica, sans-serif;
+	display: block;
+	color: #666;
+	margin:50px 120px 0px 120px;
+	-moz-box-shadow:0 0 50px black;
+	-webkit-box-shadow:0px 0px 30px black;
+	background-color: #FFFFFF;
+} 
+
+.mainPanel2
+{
+	font-size: 16px;
+	font-family: "微软雅黑","黑体",Verdana, Arial, Helvetica, sans-serif;
+	display: block;
+	color: #666;
+	margin:10px 120px 120px 120px;
+	-moz-box-shadow:0 0 50px black;
+	-webkit-box-shadow:0px 0px 30px black;
+	background-color: #FFFFFF;
+} 
+
+
+#graphRow1
+{
+	border-style: none none solid none;
+	border-width: 1px 0 1px 0;
+	border-color: #66CCFF;
+}
+
+#graphRow2
+{
+	border-style: solid none solid none;
+	border-width: 1px 0 1px 0;
+	border-color: #66CCFF;
+	height:350px;
+}
+
+#graphRow3
+{
+	border-style: none none solid none;
+	border-width: 1px 0 1px 0;
+	border-color: #66CCFF;
+}
+
+#graphRow4
+{
+	border-style: solid none solid none;
+	border-width: 1px 0 1px 0;
+	border-color: #66CCFF;
+	height:350px;
+}
+
+#chart-container1
+{
+	border-style: none dotted none none;
+	border-width: 0 1 0 0;
+	border-color: #66CCFF;
+	padding-left: 20px;
+	height:350px;
+	padding-top: 30px;
+}
+
+#chart-container2
+{
+	padding-left: 10px;
+	height:350px;
+	padding-top: 30px;
+}
+
+#chart-container3
+{
+	border-style: none dotted none none;
+	border-width: 0 1 0 0;
+	border-color: #66CCFF;
+	padding-left: 20px;
+	height:350px;
+	padding-top: 30px;
+}
+
+#donut-container
+{
+	padding-left: 50px;
+}
+
+#collapsePanel
+{
+	padding-top: 30px;
+}
+
+.mainPanelTitle
+{
+	height:45px;
+	background-color: #66CCFF;
+	font: #FFFFFF;
+}
+
+.panelName
+{
+	height:80px;
+	
+}
+
+#financingBar
+{
+	padding-left: 20px;
+	padding-top: 30px;
+}
+
+#collapsePanel3
+{
+	padding-right: 30px;
+}

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+  <link rel="stylesheet" type="text/css" href="test.css"></head>
+  <link rel="stylesheet" type="text/css" href="lib/morris/morris.css">
+<body onload="graphLoad()">
+
+  <div class="container-fluid">
+    <div class="row-fluid">
+      <div class="span12">
+        <div class="navbar">
+          <div class="navbar-inner">
+            <div class="container-fluid">
+              <a data-target=".navbar-responsive-collapse" data-toggle="collapse" class="btn btn-navbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </a>
+              <a href="#" class="brand">Epay</a>
+              <div class="nav-collapse collapse navbar-responsive-collapse">
+                <ul class="nav">
+                  <li class="active">
+                    <a href="#" onclick="callChartWindow()">主页</a>
+                  </li>
+                  <li>
+                    <a href="#" onclick="callLossReportWindow()">挂失</a>
+                  </li>
+                  <li>
+                    <a href="#" onclick="callFinancingWindow()">理财</a>
+                  </li>
+                </ul>
+                <ul class="nav pull-right">
+                  <li>
+                    <a href="#" onclick="logout()">退出</a>
+                  </li>
+                  <li class="divider-vertical"></li>
+                  <li class="dropdown">
+                    <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                      下拉菜单 <strong class="caret"></strong>
+                    </a>
+                    <ul class="dropdown-menu">
+                  <li>
+                    <a href="#" onclick="callChartWindow()">主页</a>
+                  </li>
+                  <li>
+                    <a href="#" onclick="callLossReportWindow()">挂失</a>
+                  </li>
+                  <li>
+                    <a href="#" onclick="callFinancingWindow()">理财</a>
+                  </li>
+                      <li class="divider"></li>
+                      <li>
+                        <a href="#" onclick="logout()">退出</a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+        <div class="mainPanel1">
+
+          <div class="mainPanelTitle">
+            <h3 style="padding-left: 25px;  padding-top: 3px; ">交易</h3>
+          </div>
+          <div class="panelName">
+            <h3 style="padding-top: 35px; padding-left: 35px;" id="totalExpenses">支出</h3>
+          </div>
+
+          <div class="row-fluid">
+            <div class="span12">
+              <div class="row-fluid" id="graphRow1">
+                <div class="span4" id="donut-container">
+                  <div id="donut-expense"></div>
+                </div>
+                <div class="span6 offset1" id="collapsePanel">
+                  <div class="accordion">
+                    <div class="accordion-group">
+                      <div class="accordion-heading">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-527110" href="#accordion-element-425195" id="shoppingLabel">购物</a>
+                      </div>
+                      <div id="accordion-element-425195" class="accordion-body collapse in">
+                        <div class="accordion-inner" >
+                          <table class="table table-hover table-striped">
+                            <thead>
+                              <tr>
+                                <th>编号</th>
+                                <th>收款人</th>
+                                <th>交易时间</th>
+                                <th>金额</th>
+                              </tr>
+                            </thead>
+                            <tbody id="tradeTable"></tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-group">
+                      <div class="accordion-heading">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-527110" href="#accordion-element-114536" id="transferLabel">转账</a>
+                      </div>
+                      <div id="accordion-element-114536" class="accordion-body collapse">
+                        <div class="accordion-inner" >
+                          <table class="table table-hover table-striped">
+                            <thead>
+                              <tr>
+                                <th>编号</th>
+                                <th>收款人</th>
+                                <th>交易时间</th>
+                                <th>金额</th>
+                              </tr>
+                            </thead>
+                            <tbody id="transferTable"></tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+              <div class="row-fluid" id="graphRow2">
+                <div class="span6" id="chart-container1">
+                  <div class="captain">购物(最近5个月)</div>
+                  <div id="tradeChart" class="chartGraph" style="width:450px; height:250px;"></div>
+                </div>
+                <div class="span6" id="chart-container2">
+                  <div class="captain">转账(最近5个月)</div>
+                  <div id="transferChart" class="chartGraph" style="width:450px; height:250px;"></div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="mainPanel2">
+          <div class="panelName">
+            <h3 style="padding-top: 35px; padding-left: 35px;" id="totalIncome">收入</h3>
+          </div>
+
+          <div class="row-fluid">
+            <div class="span12">
+              <div class="row-fluid" id="graphRow3">
+                <div class="span6" id="chart-container3">
+                  <div class="captain">转账(最近5个月)</div>
+                  <div id="imcomeChart" class="chartGraph" style="width:450px; height:250px;"></div>
+                </div>
+
+                <div class="span6 " id="collapsePanel2">
+                  <div class="accordion">
+                    <div class="accordion-group">
+                      <div class="accordion-heading">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-178546" href="#accordion-element-930425" id="incomeLabel">转账</a>
+                      </div>
+                      <div id="accordion-element-930425" class="accordion-body collapse in">
+                        <div class="accordion-inner" >
+                          <table class="table table-hover table-striped">
+                            <thead>
+                              <tr>
+                                <th>编号</th>
+                                <th>付款人</th>
+                                <th>交易时间</th>
+                                <th>金额</th>
+                              </tr>
+                            </thead>
+                            <tbody id="incomeTable"></tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+  <script src="lib/js/jquery.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+  <script src="lib/js/raphael-min.js"></script>
+  <script src="lib/js/morris.min.js"></script>
+  <script type="text/javascript" language="JavaScript" src="graph.js"></script>
+  <script type="text/javascript" language="JavaScript" src="./common.js"></script>
+</body>
+</html>
